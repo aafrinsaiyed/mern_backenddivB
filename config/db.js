@@ -6,7 +6,7 @@ const connectDb = async () => {
             ? process.env.MONGODB_URI_PROXY
             :process.env.MONGODB_URI
         const conn = await mongoose.connect(uri)
-        console.log(`connected success fully:${conn.connection.host}`)
+        console.log(`connected successfully:${conn.connection.host}`)
 
     } catch(error){
         console.log(`connection error:${error.message}`)

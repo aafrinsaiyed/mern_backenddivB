@@ -6,9 +6,9 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cross-env NODE_USE_ENV_PROXY=1 node App.js",
-    "dev": "cross-env NODE_USE_ENV_PROXY=1 nodemon App.js",
-    "dev:proxy-app": "cross-env USE_PROXY=true NODE_USE_ENV_PROXY=1 nodemon app.js",
+    "start": "NODE_USE_ENV_PROXY=1 node App.js",
+    "dev": "NODE_USE_ENV_PROXY=1 nodemon App.js",
+    "dev:proxy-app": "USE_PROXY=true NODE_USE_ENV_PROXY=1 nodemon app.js",
     "proxy-bridge": "node scripts/proxy-bridge.js",
     "dev:proxy": "concurrently -n bridge,app -c yellow,cyan \"npm:proxy-bridge\" \"npm:dev:proxy-app\""
   },
